@@ -68,4 +68,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 https://github.com/TheoBM5/ProgramacioInternet/tree/main/trabajo05/Src
 
 
-![alt text](https://github.com/TheoBM5/ProgramacioInternet/tree/main/trabajo05/Src/Img1 (1).png)
+![alt text](https://github.com/TheoBM5/ProgramacioInternet/blob/main/trabajo05/Src/Img1%20(1).png)
