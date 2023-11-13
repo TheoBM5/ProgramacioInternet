@@ -1,4 +1,4 @@
-# Pagina web con php
+# Pagina web con Node
 Es un servidor simple con una ruta de carga de archivos.
 Este código utiliza el sistema de módulos CommonJS, como se puede ver en las declaraciones require.
 El módulo fs de Node.js se utiliza para interactuar con el sistema de archivos. En este caso, se utiliza para comprobar el estado de los archivos y leer directorios.
