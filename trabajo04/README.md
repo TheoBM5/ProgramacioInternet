@@ -5,7 +5,7 @@ El módulo fs de Node.js se utiliza para interactuar con el sistema de archivos.
 Las funciones fs.stat y fs.readdir son asincrónicas y utilizan callbacks para manejar los resultados.
 Path: El módulo path se utiliza para manipular rutas de archivos y directorios.
 
-![alt text](https://github.com/TheoBM5/ProgramacioInternet/blob/main/trabajo04/src/img.png)
+![alt text](https://github.com/TheoBM5/ProgramacioInternet/blob/main/trabajo04/src/img1.png)
 
 ![alt text](https://github.com/TheoBM5/ProgramacioInternet/blob/main/trabajo04/src/img2.png)
 
