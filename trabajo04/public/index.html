@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  
+  <h2>Formulario de carga de archivos</h2>
+  <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+    Selecciona un archivo para cargar:
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Cargar archivo" name="submit">
+  </form>
+  
+  <!-- Espacio para mostrar la imagen -->
+  <img id="image" src="" alt="Imagen cargada" style="display: none; width: 500px; height: auto;">
+
+<!-- Espacio para mostrar el archivo de texto -->
+<textarea id="text" readonly style="display: none; width: 500px; height: 300px;"></textarea>
+
+<script>
+document.getElementById('upload-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  var formData = new FormData();
+  formData.append('file', document.getElementById('file').files[0]);
+
+  fetch('/upload', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    var img = new Image();
+    img.onload = function() {
+      // Oculta el textarea
+      document.getElementById('text').style.display = 'none';
+      document.getElementById('text').value = '';
+
+      // Muestra la imagen en el elemento <img>
+      document.getElementById('image').style.display = 'block';
+      document.getElementById('image').src = img.src;
+    };
+    img.onerror = function() {
+      // Si no es una imagen, intenta mostrarlo como texto
+      fetch(img.src)
+        .then(response => response.text())
+        .then(text => {
+          // Oculta la imagen
+          document.getElementById('image').style.display = 'none';
+          document.getElementById('image').src = '';
+
+          // Muestra el texto en el elemento <textarea>
+          document.getElementById('text').style.display = 'block';
+          document.getElementById('text').value = text;
+        });
+    };
+    img.src = data.path;
+  });
+});
+</script>
+
+</body>
+</html>
