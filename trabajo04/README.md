@@ -6,11 +6,11 @@ Las funciones fs.stat y fs.readdir son asincrónicas y utilizan callbacks para m
 Path: El módulo path se utiliza para manipular rutas de archivos y directorios.
 
 ![alt text](https://github.com/TheoBM5/ProgramacioInternet/blob/main/trabajo04/src/img1.png)
-
+Se carga el archivo 
 ![alt text](https://github.com/TheoBM5/ProgramacioInternet/blob/main/trabajo04/src/img2.png)
-
+Se selecciona el archivo
 ![alt text](https://github.com/TheoBM5/ProgramacioInternet/blob/main/trabajo04/src/img3.png)
-
+Se muestra la imagen o el texto
 ![alt text](https://github.com/TheoBM5/ProgramacioInternet/blob/main/trabajo04/src/img4.png)
 
 ![alt text](https://github.com/TheoBM5/ProgramacioInternet/blob/main/trabajo04/src/img5.png)
